@@ -80,4 +80,4 @@ This is an archived learning project, but issues and pull requests are welcome: 
 
 ## License
 
-[MIT](LICENSE) © La_Cobble
+[MIT](LICENSE) © LaCobble
