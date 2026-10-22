@@ -31,11 +31,23 @@ The dataset (not published, see below) describes up to four call attempts per le
 | [`src/Change_Caller.ipynb`](src/Change_Caller.ipynb) | Answer rate depending on whether the caller changed between attempts. |
 | [`src/Call_Length.ipynb`](src/Call_Length.ipynb) | Average call duration by weekday and hour. |
 
+## Charts
+
+Taken from the outputs of the original notebook runs (labels in French):
+
+<p align="center">
+<img src="docs/images/second-call-heatmap.webp" width="49%" alt="Heatmap of the probability that a lead answers the second call, by weekday and hour; values range from 0.12 to 0.34, highest on Tuesday at 10 h and Wednesday at 15 h">
+<img src="docs/images/call-length-heatmap.webp" width="49%" alt="Heatmap of the average call duration for the ten longest weekday and hour slots; values range from 11.5 to 13.2, highest on Wednesday at 19 h">
+</p>
+
+*Left: probability of an answer to the second call by weekday and hour (`SecondCall.ipynb`). Right: average call duration for the ten weekday / hour slots with the longest calls (`Call_Length.ipynb`).*
+
 ## Findings
 
-From the saved notebook outputs:
+From the outputs of the original runs:
 
 - Answer rates on the first call vary little with the time slot (about 22 % to 25 %); Monday at noon and at 17 h come out on top.
+- The second call depends much more on the slot (about 12 % to 34 %), with Tuesday 10 h and Wednesday 15 h on top.
 - A model based on time slots alone mostly predicts "no answer": its accuracy (about 74 % on the first call, 79 % on the second) is close to the share of unanswered calls, so time slots are a weak predictor on their own.
 - The written conclusions of the project suggested calling back from a different caller and favouring longer calls; `Change_Caller.ipynb` has no successful run saved, so treat that point as a hypothesis.
 
@@ -43,7 +55,7 @@ From the saved notebook outputs:
 
 - Python 3.11 and Jupyter.
 - The packages in [`requirements.txt`](requirements.txt): pandas, numpy, matplotlib, seaborn, pyAgrum, scikit-learn, tabulate.
-- **The data is not included**: the call datasets are confidential. The notebooks can be read with their saved outputs, but not re-executed without the data files placed in `src/` at the paths the notebooks expect (`calls_a1.csv/calls_a1.csv` … or `calls_a1.csv.bz2` …).
+- **The data is not included**: the call datasets are confidential. The outputs of `Initiation`, `FirstCaller_Version_Paul` and `Change_Caller` were cleared (they contained rows of the dataset or local paths); the other notebooks keep their charts. No notebook can be re-executed without the data files placed in `src/` at the paths the notebooks expect (`calls_a1.csv/calls_a1.csv` … or `calls_a1.csv.bz2` …).
 
 ## Run
 
