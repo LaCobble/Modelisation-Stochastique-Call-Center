@@ -1,0 +1,8 @@
+# Packages imported by the notebooks in src/.
+pandas
+numpy
+matplotlib
+seaborn
+pyAgrum
+scikit-learn
+tabulate
