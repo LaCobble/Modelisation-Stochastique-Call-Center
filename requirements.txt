@@ -3,6 +3,7 @@ pandas
 numpy
 matplotlib
 seaborn
-pyAgrum
+# pyAgrum 2.x renamed the module to "pyagrum"; the notebooks use the 1.x "pyAgrum" API.
+pyAgrum<2
 scikit-learn
 tabulate
