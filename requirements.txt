@@ -1,0 +1,9 @@
+# Packages imported by the notebooks in src/.
+pandas
+numpy
+matplotlib
+seaborn
+# pyAgrum 2.x renamed the module to "pyagrum"; the notebooks use the 1.x "pyAgrum" API.
+pyAgrum<2
+scikit-learn
+tabulate
