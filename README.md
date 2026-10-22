@@ -8,9 +8,17 @@
 
 Analysis of a call center's outbound calls with **Bayesian networks** (pyAgrum) and pandas: when should a lead be called, and does changing the caller help, to maximise the chance that the lead answers?
 
-![Heatmap of the probability that a lead answers the first call, by weekday (Monday to Friday) and hour (10 h to 19 h); values range from 0.22 to 0.25, highest on Monday at 12 h and 17 h](docs/images/answer-rate-heatmap.webp)
+## Screenshots
 
-*Probability of a positive answer to the first call by weekday and hour, as estimated by the Bayesian network in `FirstCall.ipynb` (chart taken from the notebook's saved output; labels in French).*
+<table>
+  <tr>
+    <td align="center" valign="top" width="33%"><img src="docs/images/answer-rate-heatmap.webp" alt="Heatmap of the probability that a lead answers the first call, by weekday (Monday to Friday) and hour (10 h to 19 h); values range from 0.22 to 0.25, highest on Monday at 12 h and 17 h"><br><sub>First call: answer probability by weekday and hour (<code>FirstCall</code>)</sub></td>
+    <td align="center" valign="top" width="33%"><img src="docs/images/second-call-heatmap.webp" alt="Heatmap of the probability that a lead answers the second call, by weekday and hour; values range from 0.12 to 0.34, highest on Tuesday at 10 h and Wednesday at 15 h"><br><sub>Second call: answer probability by weekday and hour (<code>SecondCall</code>)</sub></td>
+    <td align="center" valign="top" width="33%"><img src="docs/images/call-length-heatmap.webp" alt="Heatmap of the average call duration for the ten longest weekday and hour slots; values range from 11.5 to 13.2, highest on Wednesday at 19 h"><br><sub>Average call duration, ten longest slots (<code>Call_Length</code>)</sub></td>
+  </tr>
+</table>
+
+*Real figures, taken from the outputs of the original notebook runs (labels in French). The first two are estimated by Bayesian networks learned with pyAgrum.*
 
 ## What it does
 
@@ -30,17 +38,6 @@ The dataset (not published, see below) describes up to four call attempts per le
 | [`src/SecondCall.ipynb`](src/SecondCall.ipynb) | Best combinations of first-call and second-call slots for reaching the lead on the second attempt. |
 | [`src/Change_Caller.ipynb`](src/Change_Caller.ipynb) | Answer rate depending on whether the caller changed between attempts. |
 | [`src/Call_Length.ipynb`](src/Call_Length.ipynb) | Average call duration by weekday and hour. |
-
-## Charts
-
-Taken from the outputs of the original notebook runs (labels in French):
-
-<p align="center">
-<img src="docs/images/second-call-heatmap.webp" width="49%" alt="Heatmap of the probability that a lead answers the second call, by weekday and hour; values range from 0.12 to 0.34, highest on Tuesday at 10 h and Wednesday at 15 h">
-<img src="docs/images/call-length-heatmap.webp" width="49%" alt="Heatmap of the average call duration for the ten longest weekday and hour slots; values range from 11.5 to 13.2, highest on Wednesday at 19 h">
-</p>
-
-*Left: probability of an answer to the second call by weekday and hour (`SecondCall.ipynb`). Right: average call duration for the ten weekday / hour slots with the longest calls (`Call_Length.ipynb`).*
 
 ## Findings
 
