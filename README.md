@@ -26,7 +26,7 @@ The dataset (not published, see below) describes up to four call attempts per le
 | --- | --- |
 | [`src/Initiation.ipynb`](src/Initiation.ipynb) | Data loading and exploration, first Bayesian network `hour_a1, hour_a2 -> lead_answered_a2`, parameter learning, prediction and confusion matrix. |
 | [`src/FirstCall.ipynb`](src/FirstCall.ipynb) | Network `weekday_a1, hour_a1 -> lead_answered_a1`; ranks every weekday / hour pair by answer probability (heatmap above). |
-| [`src/FirstCaller_Version_Paul.ipynb`](src/FirstCaller_Version_Paul.ipynb) | Variant adding the caller ID, with a train / test split (scikit-learn) and a smoothing prior. |
+| [`src/FirstCaller_Version_B.ipynb`](src/FirstCaller_Version_B.ipynb) | Variant adding the caller ID, with a train / test split (scikit-learn) and a smoothing prior. |
 | [`src/SecondCall.ipynb`](src/SecondCall.ipynb) | Best combinations of first-call and second-call slots for reaching the lead on the second attempt. |
 | [`src/Change_Caller.ipynb`](src/Change_Caller.ipynb) | Answer rate depending on whether the caller changed between attempts. |
 | [`src/Call_Length.ipynb`](src/Call_Length.ipynb) | Average call duration by weekday and hour. |
@@ -55,7 +55,7 @@ From the outputs of the original runs:
 
 - Python 3.11 and Jupyter.
 - The packages in [`requirements.txt`](requirements.txt): pandas, numpy, matplotlib, seaborn, pyAgrum, scikit-learn, tabulate.
-- **The data is not included**: the call datasets are confidential. The outputs of `Initiation`, `FirstCaller_Version_Paul` and `Change_Caller` were cleared (they contained rows of the dataset or local paths); the other notebooks keep their charts. No notebook can be re-executed without the data files placed in `src/` at the paths the notebooks expect (`calls_a1.csv/calls_a1.csv` … or `calls_a1.csv.bz2` …).
+- **The data is not included**: the call datasets are confidential. The outputs of `Initiation`, `FirstCaller_Version_B` and `Change_Caller` were cleared (they contained rows of the dataset or local paths); the other notebooks keep their charts. No notebook can be re-executed without the data files placed in `src/` at the paths the notebooks expect (`calls_a1.csv/calls_a1.csv` … or `calls_a1.csv.bz2` …).
 
 ## Run
 
